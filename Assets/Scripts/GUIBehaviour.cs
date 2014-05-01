@@ -17,6 +17,7 @@ public class GUIBehaviour : MonoBehaviour {
 	void Update () {
 		frameCount++;
 		if (Time.time > nextUpdate) {
+			//Calculate frames per second
 			nextUpdate += 1.0f/UPDATE_RATE;
 			fps = frameCount * UPDATE_RATE;
 			frameCount = 0;
@@ -25,6 +26,7 @@ public class GUIBehaviour : MonoBehaviour {
 	}
 
 	void OnGUI() {
+		//Print frames per second
 		sFPS = "FPS: " + fps.ToString ();
 		GUI.Label (new Rect(Screen.width - 100, 0, 100, 80), sFPS, style);
 

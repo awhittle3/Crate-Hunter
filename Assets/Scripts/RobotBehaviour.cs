@@ -3,18 +3,18 @@ using System.Collections;
 
 public class RobotBehaviour : MonoBehaviour {
 
+	//Bounds of box that robot moves in
 	private const float BOUNDS_X_UPPER = 10.0f;
 	private const float BOUNDS_X_LOWER = 0.0f;
 	private const float BOUNDS_Z_UPPER = 0.0f;
 	private const float BOUNDS_Z_LOWER = -10.0f;
 
-	private const float SPEED_ROT = 150.0f;
-	private const float SPEED_LIN = 2.0f;
+	private const float SPEED_ROT = 150.0f;	//Rotation speed of robot
+	private const float SPEED_LIN = 2.0f;	//Linear speed of robot
 	
 
 	void Update () {
 		moveRobot ();
-
 	}
 
 	void moveRobot(){

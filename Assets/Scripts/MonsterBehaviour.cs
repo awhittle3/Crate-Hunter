@@ -11,10 +11,12 @@ public class MonsterBehaviour : MonoBehaviour {
 
 	void Update () {
 		if (isHit) {
+			//Shrink monster
 			transform.localScale = Vector3.Lerp(transform.localScale, new Vector3(SCALE, SCALE, SCALE), Time.deltaTime*SCALESPEED);
 			timer += Time.deltaTime;
 		}
 
+		//After shrinking, deactivate monster
 		if (timer >= MAXLIFE) {
 			gameObject.SetActive(false);
 		}

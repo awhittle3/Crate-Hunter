@@ -3,6 +3,7 @@ using System.Collections;
 
 public class CameraBehaviour : MonoBehaviour {
 
+	//Bounds of box that camera moves in
 	private const float BOUNDS_X_UPPER = 10.0f;
 	private const float BOUNDS_X_LOWER = 0.0f;
 	private const float BOUNDS_Z_UPPER = 0.0f;
@@ -19,6 +20,7 @@ public class CameraBehaviour : MonoBehaviour {
 		moveCamera ();
 	}
 
+	//Camera runs around on a rectangular path
 	void moveCamera(){
 		if (transform.position.x < BOUNDS_X_UPPER && transform.position.z >= BOUNDS_Z_UPPER) {
 			transform.position += new Vector3(SPEED_LIN*Time.deltaTime,0.0f,0.0f);
